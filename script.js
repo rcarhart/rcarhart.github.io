@@ -16,11 +16,7 @@ $("h1").animate({
     $("#heading2").delay(3000).fadeOut(function() {
   $(this).text("Front End Web Developer")
 }).fadeIn().delay(1000).fadeOut(function() {
-  $(this).text("HTML CSS SASS Bootstap Grid System")
-}).fadeIn().delay(1000).fadeOut(function() {
   $(this).text("Back End Developer")
-}).fadeIn().delay(1000).fadeOut(function() {
-  $(this).text("Node.js Expres MongoDB")
 }).fadeIn().delay(1000).fadeOut(function() {
   $(this).text("Full Stack Developer")
 }).fadeIn();
