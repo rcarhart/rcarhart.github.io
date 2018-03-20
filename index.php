@@ -140,16 +140,18 @@
         <form method="post" action="mailer.php" class="contact-form" id='form'>
             
                <div class='row'>
-               <?php
-               <div class='form-messages success'>
-                   Thank You! Your Message has been sent!
-               </div>
                
-<!--
-               <div class='form-messages error'>
-                   Oops! Something Went Wrong. Please Try Again
-               </div>
--->
+               <?php
+                   if($_GET['success'] == 1) {
+                       echo "<div class=\"form-messages success\">
+                   Thank You! Your Message has been sent.
+               </div>";
+                   }
+                if($_GET['success'] == -1){
+                       echo "<div class=\"form-messages error\">
+                   Oops! Something Went Wrong. Please Try Again!
+               </div>";
+                   }
              ?>
               </div>
               
@@ -240,7 +242,7 @@
         
 
         
-        
+        <script src="vendors/mailer-new.php"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="script.js"></script>
 	</body>

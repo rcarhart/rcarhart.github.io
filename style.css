@@ -350,6 +350,21 @@ input[type=submit]:active {
     background-color: #fa1313;
 }
 
+.form-messages {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.success {
+    background-color: rgba(33, 240, 4, 0.54);
+}
+
+.error {
+    background-color: #fff;
+}
 /* ----------------------------------------------- */
 /* FOOTER */
 /* ----------------------------------------------- */
