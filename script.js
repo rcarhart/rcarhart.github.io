@@ -18,7 +18,7 @@ $("h1").animate({
 }).fadeIn().delay(1000).fadeOut(function() {
   $(this).text("Back End Developer")
 }).fadeIn().delay(1000).fadeOut(function() {
-  $(this).text("Full Stack Developer")
+  $(this).text("Business Analyst")
 }).fadeIn();
   
     
