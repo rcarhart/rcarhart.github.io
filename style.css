@@ -19,7 +19,10 @@ body {
     overflow-x: hidden;
 }
 
-.clearfix {zoom: 1;}
+.clearfix {
+    zoom: 1;
+}
+
 .clearfix:after {
     content: '.';
     clear: both;
@@ -33,25 +36,35 @@ body {
 /* ----------------------------------------------- */
 
 header {
-  
+
+    display: grid;
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(128, 128, 128, 0.3)), url('images/node-image.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
     background-attachment: fixed;
-    
 }
 
+/* ----------------------------------------------- */
+/* Fade In*/
+/* ----------------------------------------------- */
 
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+#heading3 {
+    opacity: .5; /* Start with hidden text */
+    transition: opacity 1s;
+}
 
 /* ----------------------------------------------- */
 /* Reusable Compononents*/
 /* ----------------------------------------------- */
-
-.row {
-    max-width: 1140px;
-    margin: 0 auto;
-}
 
 section {
     padding: 80px 0;
@@ -61,54 +74,59 @@ section {
     padding: 1%;
 }
 
+.center-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100;
+    grid-auto-rows: min-content;
+}
 
 h1,
 h2,
 {
-    font-weight: 300;
-    text-transform: uppercase;
+font-weight: 300;
+text-transform: uppercase;
 }
 
 h1 {
-    margin-top: 300px;
-    margin-bottom: 20px;
     color: #fff;
-    font-size: 240%;
+    font-size: 500%;
     word-spacing: 4px;
     letter-spacing: 1px;
-    text-align: center
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 180%;
-    word-spacing: 2px;
+    font-size: 250%;
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 1px;
-    color: #c9c9c9;
+    color: #FFFFFF;
 }
-
 
 h1:after {
     display: block;
-    height: 2px;
+    height: 3px;
     background-color: rgba(248, 0, 0, 0.6);
     content: " ";
-    width: 100px;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 30px;
-    
-}
+    margin-top: 0px;
+} 
 
 h3 {
-    font-size: 180%;
+    font-size: 200%;
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 1px;
     margin-top: 20px;
-    
+    color: #FFFFFF;
 }
+
 h4 {
 
     font-weight: 200;
@@ -116,18 +134,6 @@ h4 {
     margin-top: 0;
     padding: 30px 40px;
     text-transform: uppercase;
-}
-
-
-h3:after {
-    display: block;
-    height: 2px;
-    background-color: rgba(248, 0, 0, 0.6);
-    content: " ";
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 20px;
-    
 }
 
 
@@ -147,9 +153,8 @@ h3:after {
     float: left;
 }
 
-
-
-li a, .dropbtn {
+li a,
+.dropbtn {
     display: inline-block;
     color: #fff;
     text-align: center;
@@ -157,12 +162,13 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+li a:hover,
+.dropdown:hover .dropbtn {
     background-color: rgb(159, 78, 40);
 }
 
 li.dropdown a {
-    color:#fff;
+    color: #fff;
 }
 
 li.dropdown {
@@ -174,7 +180,7 @@ li.dropdown {
     position: absolute;
     background-color: rgba(159, 78, 40, 0.65);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -188,7 +194,7 @@ li.dropdown {
 
 .dropdown-content a:hover {
     background-color: rgba(82, 82, 82, 0.6);
-    color: #fff; 
+    color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -198,30 +204,27 @@ li.dropdown {
 /* ----------------------------------------------- */
 /* Images*/
 /* ----------------------------------------------- */
-.bitmoji {
-    border-radius: 80%;
-    float: left;
+
+.content-container {
+    display: flex;
+    align-items: center;
+    /* Aligns items vertically in the center */
+    justify-content: start;
+    /* Aligns content to the start of the container */
 }
 
 .profile {
-    border-radius: 20%;
-    float: left;
-    margin-right: 50px;
-    margin-left: 0px;
-}
-
-.intro {
-    line-height: 2;
-    color: rebeccapurple
+    border-radius: 10%;
+    margin-right: 20px;
+    /* Add some space between the image and text */
+    width: 300px;
+    height: 200px;
 }
 
 .aboutMe {
-    background-color: rgba(248, 248, 248, 0.4);
-}
-
-
-.skills {
-    background: white;
+    background-color: rgba(192, 192, 192, 0.804);
+    opacity: 0.75;
+    height: 100vh;
 }
 
 /* ----------------------------------------------- */
@@ -276,7 +279,7 @@ li.dropdown {
 
 
 .contact-form {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -284,7 +287,7 @@ input[type=text],
 input[type=email],
 select,
 textarea {
-    width: 100%;
+    width: 50%;
     padding: 7px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -298,11 +301,13 @@ input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
 
-*:focus {outline: none;}
+*:focus {
+    outline: none;
+}
 
 .map-box {
-    width:100%;
-    height:500px;
+    width: 100%;
+    height: 500px;
     position: relative;
 }
 
@@ -313,15 +318,15 @@ input[type=checkbox] {
     z-index: 0;
 }
 
-.form-box{
+.form-box {
     position: absolute;
     top: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.79);
-    z-index:10;
+    z-index: 10;
     height: 500px;
-    width:50%;
-    padding-top: 40px;   
+    width: 50%;
+    padding-top: 40px;
 }
 
 
@@ -340,7 +345,7 @@ input[type=submit] {
     background-color: rgba(253, 28, 28, 0.76);
     border: 3px solid #fff;
     color: #fff;
-    margin-right: 15px; 
+    margin-right: 15px;
 }
 
 
@@ -365,13 +370,14 @@ input[type=submit]:active {
 .error {
     background-color: #fff;
 }
+
 /* ----------------------------------------------- */
 /* FOOTER */
 /* ----------------------------------------------- */
 
 footer {
     background-color: rgba(0, 0, 0, 0.72);
-    height: 100px;
+    height: 35px;
 }
 
 .footer-nav li {
@@ -381,6 +387,6 @@ footer {
 }
 
 .copyright {
-    color:#fff;
+    color: #fff;
     text-align: center;
 }

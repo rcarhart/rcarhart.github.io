@@ -1,27 +1,21 @@
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', function() {
+  // ... h3 animation code ...
 
-$("h1").animate({ 
-        'font-size' : '80px',
-        'opacity': '1'
-    },1000).animate({ 
-        'font-size' : '10px',
-        'opacity': '1'
-    },500).animate({ 
-        'font-size' : '60px',
-        'opacity': '1'
-    },1000);
-    
+  // Animate dynamicSubtitle element
+  const dynamicSubtitle = document.getElementById('dynamicSubtitle');
+  dynamicSubtitle.style.transition = 'opacity 1s';
+  let texts = ["Data Visualization", "Data Engineering", "Analytics Engineering"];
+  let index = 0;
 
+  const changeText = () => {
+      dynamicSubtitle.classList.add('fade-out');
+      dynamicSubtitle.addEventListener('transitionend', function() {
+          dynamicSubtitle.textContent = texts[index++ % texts.length];
+          dynamicSubtitle.classList.remove('fade-out');
+          dynamicSubtitle.classList.add('fade-in');
+      }, { once: true });
+  };
 
-    $("#heading2").delay(3000).fadeOut(function() {
-  $(this).text("Front End Web Developer")
-}).fadeIn().delay(1000).fadeOut(function() {
-  $(this).text("Back End Developer")
-}).fadeIn().delay(1000).fadeOut(function() {
-  $(this).text("Business Analyst")
-}).fadeIn();
-  
-    
+  setTimeout(changeText, 500);
+  setInterval(changeText, 1000+2000); // 2000 for fade in and out duration
 });
-
-
