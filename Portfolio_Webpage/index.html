@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
     <title>Ross Carhart Portfolio</title>
@@ -8,9 +8,9 @@
     <meta name="viewport" content="initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Vendors/ionicons.min.css">
-    <link href="grid.css" rel='stylesheet' type="text/css">
+    <link href="resources/css/grid.css" rel='stylesheet' type="text/css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link href="style.css" rel='stylesheet' type="text/css">
+    <link href="resources/css/style.css" rel='stylesheet' type="text/css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <header>
         <ul class='navbar'>
             <li><a href="#home">About Me</a></li>
-            <li><a href="#news">Contact Me</a></li>
+            <li><a href="#Contact-Me">Contact Me</a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Social Media</a>
                 <div class="dropdown-content">
@@ -29,11 +29,12 @@
                             class="fas fa-chart-line"></i>Tableau</a>
             </li>
         </ul>
-        <div class="center-container">
-            <h1>Ross Carhart</h1>
-            <h2>Data Consultant</h2>
-            <h3 id="dynamicSubtitle">Services Offered</h3> <!-- New element for changing text -->
-        </div>
+        <div id="particles-js"></div>
+            <div class="center-container">
+                <h1>Ross Carhart</h1>
+                <h2>Data Consultant</h2>
+                <h3 id="dynamicSubtitle">Services Offered</h3> <!-- New element for changing text -->
+            </div>
     </header>
     <section class='aboutMe'>
         </div>
@@ -142,7 +143,7 @@
 
 
         <div class="row">
-            <form method="post" action="mailer.php" class="contact-form" id='form'>
+            <form method="post" class="contact-form" id='form'>
 
                 <div class='row'>
                     <?php
@@ -215,7 +216,10 @@
             </p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="resources/js/particles.js"></script>
+    <script src="resources/js/script.js"></script>
+    <script src="resources/js/app.js"></script>
+    <script src="resources/js/lib/stats.js"></script>
 </body>
 
 </html>
