@@ -17,5 +17,5 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   setTimeout(changeText, 500);
-  setInterval(changeText, 1000+2000); // 2000 for fade in and out duration
+  setInterval(changeText, 1000+1500); // 2000 for fade in and out duration
 });
