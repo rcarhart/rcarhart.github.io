@@ -113,7 +113,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     align-content: center;
     justify-items:stretch;
 }
@@ -122,8 +122,7 @@ header {
   #particles-js{
     position: absolute;
     opacity: 0.5;
-    top: 0px;
-    bottom: 0;
+    inset: 0;
     z-index: 1;
     background-color: #282525;
     background-image: url('');
@@ -273,9 +272,9 @@ h3 {
 }
 
 h4 {
-
-    font-weight: 200;
-    margin-bottom: 60px;
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 10px;
     margin-top: 0;
     padding: 30px 40px;
     text-transform: uppercase;
@@ -378,85 +377,70 @@ h4 {
 /* ----------------------------------------------- */
 /* Contact Form*/
 /* ----------------------------------------------- */
-.contact-form {
-    width: 100%;
-    margin: 0 auto;
+
+.contact-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-input[type=text],
-input[type=email],
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Styles for labels, inputs, select, textarea */
+label {
+    align-self: center;
+}
+
+input[type="text"],
+input[type="email"],
 select,
 textarea {
-    width: 50%;
-    padding: 7px;
-    border-radius: 3px;
+    padding: 0.5rem;
     border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-textarea {
-    height: 100px;
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-input[type=checkbox] {
-    margin: 10px 5px 10px 0;
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
-*:focus {
-    outline: none;
+/* Responsive adjustments */
+@media screen and (min-width: 600px) {
+    .contact-us {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-group {
+        grid-template-columns: 1fr 2fr;
+    }
 }
-
-.form-box {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.79);
-    z-index: 10;
-    height: 500px;
-    width: 50%;
-    padding-top: 40px;
-}
-
-
-input[type=submit] {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
-}
-
-
-input[type=submit] {
-    background-color: rgba(253, 28, 28, 0.76);
-    border: 3px solid #fff;
-    color: #fff;
-    margin-right: 15px;
-}
-
-
-
-input[type=submit]:hover,
-input[type=submit]:active {
-    background-color: #fa1313;
-}
-
-.form-messages {
-    width: 70%;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-}
-
-.success {
+.form-messages success {
     background-color: rgba(33, 240, 4, 0.54);
 }
 
-.error {
-    background-color: #fff;
+.form-messages error {
+    background-color: rgba(241, 12, 12, 0.54);
 }
+
 
 /* ----------------------------------------------- */
 /* FOOTER */
@@ -477,27 +461,3 @@ footer {
     color: #fff;
     text-align: center;
 }
-
-/* ----------------------------------------------- */
-/* Responsive Design*/
-/* ----------------------------------------------- */
-
-  /* Responsive Design - Adjusts to one column on smaller screens */
-  @media (max-width: 600px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* Responsive design adjustments */
-@media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-}
-  
-@media (max-width: 480px) {
-    .gallery {
-      grid-template-columns: 1fr;
-    }
-  }

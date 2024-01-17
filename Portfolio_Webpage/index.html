@@ -39,20 +39,20 @@
             </div>
     </header>
     <section class='aboutMe' id="home"></a>
+        <h4>About Me</h4>
             <div class="content-container">
-                <h4>About Me</h4>
                 <img src="resources/css/images/Business_Picture.jpg" alt="profile pic Ross Carhart" class='profile'>
                 <div class="grid-container">
                     <div class="grid-item">
-                        <h3>Expertise in Data Analysis</h3>
+                        <h5>Expertise in Data Analysis</h5>
                         <p>My professional journey is deeply entrenched in the realm of data analysis, where I specialize in converting intricate data sets into lucid and influential business insights. I pride myself on my proven track record of devising strategies that significantly enhance key business metrics.</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Effective Communication</h3>
+                        <h5>Effective Communication</h5>
                         <p>I possess exceptional communication skills, vital for distilling and conveying complex data findings. This ability allows me to effectively communicate with stakeholders at various levels within an organization, thus facilitating informed decision-making processes.</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Innovation</h3>
+                        <h5>Innovation</h5>
                         <p>In my continuous pursuit of innovation, I excel in dynamic and evolving environments. My passion lies in leveraging my advanced skills in data analysis to propel business success, always striving to stay at the forefront of industry advancements.</p>
                     </div>
                 </div>
@@ -70,87 +70,50 @@
                 <img src='resources\css\images\Filters.png' alt="Tableau Image" class="uniform-size">
                 <img src='resources/css/images/Women in the House of Representatives.png' class="uniform-size">
                 <img src='resources/css/images/World Demographics.png' class="uniform-size">
-        </div>
+            </div>
     </section>
     <section>
-
     </section>
-    <section class="Contact-US" id="Contact">
-
-        <a name="news"></a>
-
-
-        <div class="row">
-            <H3>Contact Me</H3>
-        </div>
-
-
-        <div class="row">
-            <form method="post" class="contact-form" id='form'>
-
-                <div class='row'>
-                    <?php
-               <div class='form-messages success'>
-                   Thank You! Your Message has been sent!
-               </div>
-                </div>
-
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>Name</label>
-                    </div>
-
-                    <div class="col span-2-of-3">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>Email</label>
-                    </div>
-
-                    <div class="col span-2-of-3">
-                        <input type="email" name="email" id="email" placeholder="Your email" required>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>How Did you Find Me</label>
-                    </div>
-
-                    <div class="col span-2-of-3">
-                        <select name="find-us" id="find-us">
-                            <option value="Word of Mouth" selected>Word of Mouth</option>
-                            <option value="search">Search Engine</option>
-                            <option value="LinkedIn">LinkedIn</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                </div>
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>Drop me a link</label>
-                    </div>
-
-                    <div class="col span-2-of-3">
-                        <textarea name="message" placeholder="Your Message"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>&nbsp;</label>
-                    </div>
-                    <div class="col span-2-of-3">
-                        <input type="Submit" value="SEND">
-                    </div>
-                </div>
-            </form>
-        </div>
+    <section class="contact-us" id="Contact">
+        <h3>Contact Me</h3>
+    
+        <form method="post" class="contact-form" id='form'>
+            <!-- javascript success message -->
+            <div class='form-messages success'>Thank You! Your Message has been sent!</div>
+            <div class='form-messages error'>Thank You! However, there has been an error. Try Again!</div>
+    
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Your email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="find-us">How Did you Find Me</label>
+                <select name="find-us" id="find-us">
+                    <option value="Word of Mouth" selected>Word of Mouth</option>
+                    <option value="search">Search Engine</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Drop me a link</label>
+                <textarea name="message" id="message" placeholder="Your Message"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <input type="submit" value="SEND">
+            </div>
+        </form>
     </section>
+    
+
 
     <footer>
         <div class="row">
