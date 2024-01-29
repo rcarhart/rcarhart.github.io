@@ -29,8 +29,7 @@
 
 html,
 body {
-    background-color: #2c2b2b;
-    color: #2c2b2b;
+    background-color: #000;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -151,7 +150,7 @@ header {
 li a,
 .dropbtn {
     display: inline-block;
-    color: #651717;
+    color: #eb0909;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -160,11 +159,11 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-    background-color: #f55a5a;;
+    background-color: #ffffff;;
 }
 
 li.dropdown a {
-    color: #b41111;
+    color: #ffffff;
 }
 
 li.dropdown {
@@ -174,14 +173,14 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(159, 78, 40, 0.65);
+    background-color: #eb0909;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 3;
 }
 
 .dropdown-content a {
-    color: rgb(224, 51, 51);
+    color: #eb0909;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -190,7 +189,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(82, 82, 82, 0.6);
+    background-color: rgba(244, 240, 240, 0.6);
     color: #fff;
 }
 
@@ -280,21 +279,54 @@ h4 {
     text-transform: uppercase;
 }
 
-.row h2{
+h5 {
+    font-size: 150%;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 30px 40px;
+    text-transform: uppercase;
 }
+
+h6{
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+span{
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 30px 40px;
+    text-transform: uppercase;
+}
+
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */
     gap: 20px; /* Space between columns */
     padding: 20px; /* Padding around the grid */
+    justify-content: center;
+    align-content: center;
   }
+
+  .grid-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
   .profile {
     width: 100%;
-    max-width: 200px; /* Adjust as needed */
+    max-width: 400px; /* Adjust as needed */
     margin: 0 auto 20px; /* Centers the image */
     display: block;
   }
@@ -309,7 +341,12 @@ h4 {
     margin-top: 0;
   }
   
-
+  .icon-text-container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+  }
+  
 /* ----------------------------------------------- */
 /* Images*/
 /* ----------------------------------------------- */
@@ -323,17 +360,38 @@ h4 {
 }
 
 .profile {
-    border-radius: 10%;
-    margin-right: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
     /* Add some space between the image and text */
     width: 300px;
-    height: 200px;
 }
 
 .aboutMe {
-    background-color: white;
-    opacity: 0.75;
-    min-height: 100vh;
+    background-color: #FFFFFF;
+    opacity: 1;
+    min-height: 50vh;
+    margin: 0 auto;
+}
+
+.services {
+    opacity: 1;
+    min-height: 50vh;
+    margin: 0 auto;
+}
+.references{
+    background-color: #FFFFFF;
+    opacity: 1;
+    min-height: 50vh;
+    margin: 0 auto;
+}
+
+.intro{
+    line-height: 2;
+    padding: 20px;
+    margin-right:10%;
+    margin-left: 20%;
+    align-content: center;
 }
 
 /* ----------------------------------------------- */
@@ -391,122 +449,6 @@ h4 {
 .gallery:hover figcaption {
     opacity: 1;
 }
-/* ----------------------------------------------- */
-/* carousel */
-/* ----------------------------------------------- */
-
-/* CSS for the image caroussell (poster) */
-/** {box-sizing: border-box}
-    body {font-family: Verdana, sans-serif; margin:0}
-    .mySlides {display: none}
-    img {vertical-align: middle;}*/
-
-    /* Slideshow container */
-    .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-      }
-  
-      /* Next & previous buttons */
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-      }
-  
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-  
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
-  
-      /* Caption text */
-      .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
-  
-  
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #69b3a2;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-  
-      .active, .dot:hover {
-        background-color: white;
-      }
-  
-  /* ------------------------------------------------------------------------------------------------------------------- */
-  
-
-/* ------------------------------------------------------------------------------------------------------------------- */
-/* MISTAKE CAROUSSEL CUSTOM
-/* ------------------------------------------------------------------------------------------------------------------- */
-
-
-.carousel-control-next, .carousel-control-prev {
-    color: black;
-  }
-  
-  .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  }
-  
-  .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-  }
-  
-  .carousel-control-prev {
-      left: -121px;
-  }
-  .carousel-control-next {
-      right: -121px;
-  }
-  
-  .mytextrelated {
-    text-transform: none;
-    font-weight: normal !important;
-    color: black;
-  }
-  
-  .mytitlerelated {
-    margin: 10px 0 10px;
-    font-size: 14px;
-  }
-  
-  .mybtnrelated {
-    height: 380px;
-    margin-top: 24px;
-    padding-top: 24px;
-  }
-  
-  
   
 
 /* ----------------------------------------------- */
@@ -515,25 +457,35 @@ h4 {
 
 .contact-us {
     display: grid;
+    background-color: #000000;
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem;;
 }
 
 .contact-form {
     display: grid;
     gap: 1rem;
+    justify-content: center;
 }
 
 .form-group {
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .form-group {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 /* Styles for labels, inputs, select, textarea */
 label {
     align-self: center;
+    color: #fff;
 }
 
 input[type="text"],
@@ -558,21 +510,13 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* Responsive adjustments */
-@media screen and (min-width: 600px) {
-    .contact-us {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .form-group {
-        grid-template-columns: 1fr 2fr;
-    }
-}
-.form-messages success {
+.form-messages.success {
+    display: none;
     background-color: rgba(33, 240, 4, 0.54);
 }
 
-.form-messages error {
+.form-messages.error {
+    display: none;
     background-color: rgba(241, 12, 12, 0.54);
 }
 

@@ -7,9 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="Vendors/ionicons.min.css">
+    <link href="/vendors/fonts/fontawesome-free-6.5.1-web/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/vendors/fonts/fontawesome-free-6.5.1-web/css/brands.min.css" rel="stylesheet">
+    <link href="/vendors/fonts/fontawesome-free-6.5.1-web/css/solid.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="resources/css/grid.css" rel='stylesheet' type="text/css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link href="resources/css/style.css" rel='stylesheet' type="text/css">
 
 </head>
@@ -19,15 +21,15 @@
     <header>
         <ul class='navbar'>
             <li><a href="#home">About Me</a></li>
-            <li><a href="#Contact-Me">Contact Me</a></li>
+            <li><a href="#contact">Contact Me</a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Social Media</a>
                 <div class="dropdown-content">
-                    <a target='blank' href="https://github.com/rcarhart"><i class="fab fa-github"></i>GitHub</a>
+                    <a target='blank' href="https://github.com/rcarhart"><i class="fab fa-github" style="margin-right: 5px;"></i>GitHub</a>
                     <a target='_blank' href="https://www.linkedin.com/in/ross-carhart-%F0%9F%98%81-504b8761"><i
-                            class="fab fa-linkedin"></i>LinkedIn</a>
-                    <a target='_blank' href="https://public.tableau.com/profile/ross.carhart#!/"><i
-                            class="fas fa-chart-line"></i>Tableau</a>
+                            class="fab fa-linkedin"style="margin-right: 5px;"></i>LinkedIn</a>
+                    <a target='_blank' href="https://public.tableau.com/profile/ross.carhart#!/">
+                        <i class="fa-solid fa-chart-bar" style="margin-right: 5px;"></i>Tableau</a>
                 </div>
             </li>
         </ul>
@@ -40,23 +42,64 @@
     </header>
     <section class='aboutMe' id="home"></a>
         <h4>About Me</h4>
-            <div class="content-container">
-                <img src="resources/css/images/Business_Picture.jpg" alt="profile pic Ross Carhart" class='profile'>
-                <div class="grid-container">
-                    <div class="grid-item">
-                        <h5>Expertise in Data Analysis</h5>
-                        <p>My professional journey is deeply entrenched in the realm of data analysis, where I specialize in converting intricate data sets into lucid and influential business insights. I pride myself on my proven track record of devising strategies that significantly enhance key business metrics.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h5>Effective Communication</h5>
-                        <p>I possess exceptional communication skills, vital for distilling and conveying complex data findings. This ability allows me to effectively communicate with stakeholders at various levels within an organization, thus facilitating informed decision-making processes.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h5>Innovation</h5>
-                        <p>In my continuous pursuit of innovation, I excel in dynamic and evolving environments. My passion lies in leveraging my advanced skills in data analysis to propel business success, always striving to stay at the forefront of industry advancements.</p>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col">
+          <img src="resources/css/images/Business_Picture.jpg" alt="profile pic Ross Carhart" class='profile'> 
+          </div> 
+            <p class="intro">
+            Hello and Welcome! I'm Ross Carhart, a seasoned data professional with over 6 years of diverse experience across multiple industries. 
+            My journey has led me to work with a wide spectrum of data types, ranging from genomic and financial to social media data. 
+            Skilled in an array of tools like SQL, Python, Tableau, and PowerBI, I've honed my expertise in various data frameworks, including data warehousing, data lakes, and data marts.
+            My proficiency extends to different data processes, where I've tackled challenges in data cleaning, mining, and modeling. 
+            In the realm of data analytics, I've navigated through predictive, prescriptive, and descriptive analytics, providing comprehensive insights for decision-making. 
+            Moreover, my experience in data management encompasses vital areas such as data governance, security, and quality, ensuring robust and reliable data infrastructure. Join me in harnessing the full potential of your data to drive transformative business outcomes.
+            </p>
+          </div> 
+            <div> 
+              <h4>High Quality Data Professional &mdash; That you can rely on!</h5>
+          </div>
+    <div class="grid-container">
+        <div>
+            <div class="icon-text-container">
+                <i class="fa-solid fa-wrench fa-2xl"></i>
+            <span>Data Engineering</span>
             </div>
+            <p>
+                Streamline your data processes through API integration. Automate workflows to boosts your effeciency.
+            </p>
+        </div>
+        <div>
+            <div class="icon-text-container">
+                <i class="fa-solid fa-database fa-2xl"></i>
+            <span>Data Management</span>
+        </div>
+            <p>
+                Robust frameworks for organizing, storing, and safeguarding your data, ensuring its integrity and
+                accessibility
+            </p>
+        </div>
+        <div>
+            <div class="icon-text-container">
+                <i class="fa-solid fa-chart-simple fa-2xl"></i>
+                <span>Data Analytics</span>
+            </div>
+            <p>
+                Unlock the power of your data with expert analytics.
+                Reveal hidden trends and insights to drive innovation.
+            </p>
+        </div>
+        <div>
+            <div class="icon-text-container">
+                <i class="fa-solid fa-chart-pie fa-2xl"></i>
+                <span>Data Visualizations</span>
+            </div>
+            <p>
+                Bring your data to life with cutting edge data visualizations that will uncover valuable insights through intuitive visual tools.
+            </p>
+        </div>
+    </div>
+    </section>
+    <section class='services' id="visuals">
             <div class='gallery-images'>
                 <figure class='gallery'>
                     <img src='resources/css/images/Dark Web Pricing.png' class="uniform-size">
@@ -64,7 +107,7 @@
                 </figure>
                 <figure class='gallery'>
                     <img src='resources/css/images/painting Nat.png' class="uniform-size">
-                    <figcaption>Painting of Nat Turner</figcaption>
+                    <figcaption>Website for Painting Company</figcaption>
                 </figure>
                 <figure class='gallery'>
                     <img src='resources/css/images/MLB.png' alt="Tableau Image" class="uniform-size">
@@ -97,106 +140,52 @@
                     <figcaption>Women in the house of Representatives</figcaption>
                 </figure>
                 <figure class='gallery'>
-                    <img src='resources/css/images/World Demographics.png' class="uniform-size">
-                    <figcaption>World Demographics</figcaption>
+                    <img src='resources/css/images/Goodreads.png' class="uniform-size">
+                    <figcaption>My Goodreads data</figcaption>
                 </figure>
             </div>
     </section>
-
-    <section id="testimonial">
-        <div class="container">
-    
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-    
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
-                    <img src="img/reference/DGouache.png" style="border-radius: 50%" width="170px">
-                  </div>
-                  <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
-                    <br>
-                    <p style="color: grey; font-size: 8"><i>"[...] Ross did an absolutely brilliant job. He has multiple
-                        skills and qualities making him a great data science project member, and even leader : excellent
-                        knowledge and learning ability of diverse statistical and data management tools obviously, and a
-                        real knack for data viz."</i></p>
-                    <p><a href="https://www.linkedin.com/in/david-gouache-88097462/">D. Gouache</a> - <span style="font-size: 12px; display: inline;"><i>Deputy Director at <a href="http://www.terresinovia.fr">Terres Inovia</a></i></span></p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
-                    <img src="img/reference/JDavid.jpg" style="border-radius: 50%" width="170px">
-                  </div>
-                  <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
-                    <br>
-                    <p style="color: grey; font-size: 8"><i>"always performed with outstanding skills and impressive
-                        capacity for adaptation and efficiency. His job was crucial for the publication of important
-                        results. [...] I thus highly recommend him for any work concering framing and analysis of huge data
-                        sets."</i></p>
-                    <p><a href="https://www.researchgate.net/profile/Jacques_David4">J. David</a> - <span style="font-size: 12px; display: inline;"><i>Professor at <a href="https://www.montpellier-supagro.fr">Montpellier Supagro</a></i></span></p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
-                    <img src="img/reference/SGlemin.jpg" style="border-radius: 50%" width="170px">
-                  </div>
-                  <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
-                    <br>
-                    <p style="color: grey; font-size: 8"><i>"I worked with Ross for several collaborative projects on genomic
-                        data analysis. Ross was very efficient and highly reactive to our requests and he was also autonomous
-                        to find the best solutions to the problems we submitted to him."</i></p>
-                    <p><a href="https://www.researchgate.net/profile/Jacques_David4">S. Glémin</a> - <span style="font-size: 12px; display: inline;"><i>Senior Researcher at <a href="https://www.montpellier-supagro.fr">CNRS</a></i></span></p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
-                    <img src="img/reference/JMGrath.jpg" style="border-radius: 50%;" width="170px">
-                  </div>
-                  <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
-                    <br>
-                    <p style="color: grey; font-size: 8"><i> Ross has taught me everything I know about data visualization!
-                        He taught my group how to display data in clever ways, and has been responsible for our recent
-                        interactive website related to psychiatric epidemiology.<br><br>Also, he is a super-fast and
-                        efficient bioinformatician. He has set up a pipeline to handle large genetic datasets and apply
-                        modern analytic methods to explore the genetic architecture of traits and disorders.<br><br>He is a
-                        super-bright guy – I can highly recommend him!"</i></p>
-                    <p><a href="https://twitter.com/John_J_McGrath?lang=en">John McGrath</a> - <span style="font-size: 12px; display: inline;"><i>Senior Researcher at the <a href="https://qbi.uq.edu.au">Queensland Brain Institute</a></i></span></p>
-                  </div>
-                </div>
-              </div>
-    
+    <section class ="references" id="references">
+        <div class="grid-container">
+            <div class="center-container">
+                <span>Pete Lawson</span>
+                <h6>VP of Supply Chain</h6>
+                <p>
+                    Ross stands out as one of the most industrious individuals I have encountered in my professional experience.
+                    His exceptional work ethic and dedication make him an invaluable asset to any team. Furthermore, his remarkable capacity for learning and adapting is unparalleled, setting him apart in dynamic work environments.
+                </p>
             </div>
-    
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-    
+            <div class="center-container">
+                <span>Nicole Peduto</span>
+                <p>
+                    Ross has proven himself to be someone who is always thinking with a consumer first mindset.  He is curious with a remarkable ability to comprehend complex business challenges and devise effective solutions.  Ross has been instrumental in providing clear analytics to C-suite executives and has the ability to not only share the data, but to tell the story of the data to help inform business decisions.  Ross was an instrumental member of our team, always willing to jump in and help with ad-hoc requests while maintaining his day to day.  He played a significant role in the overall growth of GNC's subscription business and was invaluable to our team
+                </p>
+            </div>
+            <div>
+                <div class="icon-text-container">
+                    <i class="fa-solid fa-chart-simple fa-2xl"></i>
+                    <span>Allison Bentley</span>
+                </div>
+                <p>
+                    Unlock the power of your data with expert analytics.
+                    Reveal hidden trends and insights to drive innovation.
+                </p>
+            </div>
+            <div>
+                <div class="icon-text-container">
+                    <i class="fa-solid fa-chart-pie fa-2xl"></i>
+                    <span>Charles Horn</span>
+                </div>
+                <p>
+                    Bring your data to life with cutting edge data visualizations that will uncover valuable insights through intuitive visual tools.
+                </p>
+            </div>
         </div>
       </section>
 
-    <section class="contact-us" id="Contact">
-        <h3>Contact Me</h3>
-    
+    <section class="contact-us" id="contact">
         <form method="post" class="contact-form" id='form'>
-            <!-- javascript success message -->
-            <div class='form-messages success'>Thank You! Your Message has been sent!</div>
-            <div class='form-messages error'>Thank You! However, there has been an error. Try Again!</div>
-    
+          <h5>Contact Me</h5>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
@@ -224,21 +213,23 @@
     
             <div class="form-group">
                 <input type="submit" value="SEND">
+                            <!-- javascript success message -->
+            <div class='form-messages success'>Thank You! Your Message has been sent!
+            </div>
+            <div class='form-messages error'>Thank You! However, there has been an error. Try Again!
+            </div>
             </div>
         </form>
     </section>
 
     <footer>
-        <div class="row">
             <p class='copyright'>
                 Copyright &copy; 2024 by Ross Carhart. All rights reveserved.
             </p>
-        </div>
     </footer>
     <script src="resources/js/particles.js"></script>
     <script src="resources/js/script.js"></script>
     <script src="resources/js/app.js"></script>
-    <script src="resources/js/carousel.js"></script>
     <script src="resources/js/lib/stats.js"></script>
 </body>
 
