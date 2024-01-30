@@ -29,7 +29,7 @@
 
 html,
 body {
-    background-color: #000;
+    background-color: #282525;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -305,76 +305,14 @@ span{
     text-transform: uppercase;
 }
 
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */
-    gap: 20px; /* Space between columns */
-    padding: 20px; /* Padding around the grid */
-    justify-content: center;
-    align-content: center;
-  }
-
-  .grid-container > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-
-  .profile {
-    width: 100%;
-    max-width: 400px; /* Adjust as needed */
-    margin: 0 auto 20px; /* Centers the image */
-    display: block;
-  }
-  
-  .grid-item {
-
-    padding: 20px; /* Padding inside each item */
-    text-align: center; /* Center-align text */
-  }
-  
-  .grid-item h3 {
-    margin-top: 0;
-  }
-  
-  .icon-text-container {
-    display: flex;
-    align-items: center; /* Vertical alignment */
-    justify-content: center; /* Horizontal alignment */
-  }
-  
-/* ----------------------------------------------- */
-/* Images*/
-/* ----------------------------------------------- */
-
-.content-container {
-    display: flex;
-    align-items: center;
-    /* Aligns items vertically in the center */
-    justify-content: start;
-    /* Aligns content to the start of the container */
-}
-
-.profile {
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    /* Add some space between the image and text */
-    width: 300px;
-}
-
-.aboutMe {
+.aboutme {
     background-color: #FFFFFF;
     opacity: 1;
-    min-height: 50vh;
+    min-height: 100vh;
     margin: 0 auto;
 }
 
-.services {
+.visualizations {
     opacity: 1;
     min-height: 50vh;
     margin: 0 auto;
@@ -385,30 +323,92 @@ span{
     min-height: 50vh;
     margin: 0 auto;
 }
-
-.intro{
-    line-height: 2;
-    padding: 20px;
-    margin-right:10%;
-    margin-left: 20%;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    gap: 20px; /* Space between columns */
+    padding: 20px; /* Padding around the grid */
+    justify-content: center;
     align-content: center;
+    padding-bottom: 50px;
+  }
+
+  .grid-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
+ .references .grid-container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    background-color: #FFFFFF;
+}
+
+.content-container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+.content-container .profile {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 100px; 
+    border-radius: 200%;
+    align-items: center;
+    }
+
+.content-container .intro {
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+    line-height: 2;
+    padding: 20px;
+    align-content: center;    
+  }
+  
+.grid-item {
+
+    padding: 20px; /* Padding inside each item */
+    text-align: center; /* Center-align text */
+  }
+  
+.grid-item h3 {
+    margin-top: 0;
+  }
+  
+.icon-text-container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    flex-wrap: wrap;
+  }
+ .icon-text-container span{
+    font-size: medium;
+    font-weight: bold;
+ }
 /* ----------------------------------------------- */
 /* gallery images*/
 /* ----------------------------------------------- */
 .gallery-images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
-    margin-top: 20px;
+    gap: 10px;
+    margin: 20px 5px;
   }
-  
-  .gallery {
+
+.gallery {
     position: relative;
     width: 100%;
-    height: 200px; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
 }
+
 
 .gallery img {
     opacity: .7;
@@ -424,9 +424,9 @@ span{
 
 .gallery:hover img {
     opacity: 1;
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    transform: scale(1.10);
 }
 
 .gallery figcaption {
