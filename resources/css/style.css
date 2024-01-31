@@ -554,12 +554,11 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     .content-container{
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: 1fr;
     }
 
     /* other responsive adjustments */
 }
-/* Adjustments for smaller screens */
 @media screen and (max-width: 600px) {
     .form-group {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
