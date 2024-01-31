@@ -305,7 +305,7 @@ span[itemprop="name"]{
 
 .visualizations {
     opacity: 1;
-    min-height: 50vh;
+    min-height: 25vh;
     margin: 0 auto;
 }
 .references{
