@@ -553,7 +553,7 @@ footer {
     .grid-container {
         grid-template-columns: 1fr; /* Single column */
     }
-    
+
     .references .grid-container {
         grid-template-columns: 1fr;
     }
@@ -562,5 +562,11 @@ footer {
     }
     .center-container{
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-group {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
