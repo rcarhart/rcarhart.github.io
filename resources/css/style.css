@@ -478,13 +478,6 @@ span[itemprop="name"]{
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
-/* Adjustments for smaller screens */
-@media screen and (max-width: 600px) {
-    .form-group {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
-
 /* Styles for labels, inputs, select, textarea */
 label {
     align-self: center;
@@ -560,6 +553,15 @@ footer {
     .grid-container {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
+    .content-container{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 
     /* other responsive adjustments */
+}
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .form-group {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
