@@ -550,17 +550,13 @@ footer {
         text-align: center;
     }
 
-    .grid-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    .references .grid-container {
+        grid-template-columns: 1fr;
     }
     .content-container{
         grid-template-columns: 1fr;
     }
-
-    /* other responsive adjustments */
-}
-@media screen and (max-width: 600px) {
-    .form-group {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .center-container{
+        grid-template-columns: 1fr;
     }
 }
