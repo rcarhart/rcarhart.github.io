@@ -106,17 +106,6 @@ header {
   
   
   /* ---- particles.js container ---- */
-  .center-container {
-    position: relative;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    align-content: center;
-    justify-items:stretch;
-}
-
 
   #particles-js{
     position: absolute;
@@ -273,7 +262,6 @@ h3 {
 h4 {
     font-size: 150%;
     text-align: center;
-    margin-bottom: 10px;
     margin-top: 0;
     padding: 30px 40px;
     text-transform: uppercase;
@@ -297,18 +285,21 @@ h6{
 }
 
 span{
-    font-size: 150%;
+    font-size: 100%;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 0;
-    padding: 30px 40px;
     text-transform: uppercase;
+}
+
+span[itemprop="name"]{
+    font-weight: bold;
 }
 
 .aboutme {
     background-color: #FFFFFF;
     opacity: 1;
-    min-height: 100vh;
+    min-height: 70vh;
     margin: 0 auto;
 }
 
@@ -330,31 +321,37 @@ span{
     padding: 20px; /* Padding around the grid */
     justify-content: center;
     align-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
   }
 
-  .grid-container > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
  .references .grid-container{
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    justify-content: center;
-    align-content: center;
+    align-items: start;
     background-color: #FFFFFF;
+}
+
+.center-container {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items:stretch;
+}
+
+.center-container p{
+    line-height: 200%;
+    font-family: Barcelony Signature;
 }
 
 .content-container{
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 20px;
-    align-items: center;
+    align-items: start;
 }
 .content-container .profile {
     width: 100%;
@@ -372,7 +369,8 @@ span{
     padding: 20px;
     align-content: center;    
   }
-  
+
+
 .grid-item {
 
     padding: 20px; /* Padding inside each item */
@@ -389,9 +387,14 @@ span{
     justify-content: center; /* Horizontal alignment */
     flex-wrap: wrap;
   }
+.icon-text-container p{
+    text-align: center;
+}
+
  .icon-text-container span{
     font-size: medium;
     font-weight: bold;
+    padding: 30px 40px;
  }
 /* ----------------------------------------------- */
 /* gallery images*/
