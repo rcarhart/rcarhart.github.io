@@ -7,9 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="/vendors/fonts/fontawesome-free-6.5.1-web/css/fontawesome.min.css" rel="stylesheet">
-    <link href="/vendors/fonts/fontawesome-free-6.5.1-web/css/brands.min.css" rel="stylesheet">
-    <link href="/vendors/fonts/fontawesome-free-6.5.1-web/css/solid.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="resources/css/grid.css" rel='stylesheet' type="text/css">
     <link href="resources/css/style.css" rel='stylesheet' type="text/css">
@@ -182,10 +179,10 @@
       </section>
 
     <section class="contact-us" id="contact">
-        <form method="post" class="contact-form" id='form'>
+        <form action="https://api.web3forms.com/submit" method="post" class="contact-form" id='form'>
+            <input type="hidden" name="access_key" value="ff6d044d-9e74-4a33-9bd1-e920e73e1567">
           <h5>Contact Me</h5>
             <div class="form-group">
-                <input type="hidden" name="access_key" value="ff6d044d-9e74-4a33-9bd1-e920e73e1567">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
             </div>
