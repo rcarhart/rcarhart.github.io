@@ -19,3 +19,27 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(changeText, 500);
   setInterval(changeText, 1000+1500); // 2000 for fade in and out duration
 });
+
+// ... Button Scroll ... //
+document.addEventListener('DOMContentLoaded', (event) => {
+    const navbarLinks = document.querySelectorAll('ul.navbar a');
+
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Check if the href attribute is an anchor link (starts with #)
+            const targetId = this.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                e.preventDefault(); // Prevent default only for anchor links
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});

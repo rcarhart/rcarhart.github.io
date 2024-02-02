@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form');
     const successMessage = document.querySelector('.form-messages.success');
     const errorMessage = document.querySelector('.form-messages.error');
@@ -10,3 +10,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Collect form data
     const formData = new FormData(form);
 
+ */
