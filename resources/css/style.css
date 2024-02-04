@@ -124,9 +124,9 @@ header {
 /* ----------------------------------------------- */
 
 .navbar {
-    display: flex;
+    /* display: flex; */
     list-style-type: none;
-    margin-left: 30px;
+    margin-left: 1%;
     padding: 0;
     z-index: 2;
     overflow: hidden;
@@ -299,13 +299,11 @@ span[itemprop="name"]{
 .aboutme {
     background-color: #FFFFFF;
     opacity: 1;
-    min-height: 70vh;
     margin: 0 auto;
 }
 
 .visualizations {
     opacity: 1;
-    min-height: 25vh;
     margin: 0 auto;
 }
 .references{
@@ -349,17 +347,18 @@ span[itemprop="name"]{
 
 .content-container{
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 30% 1fr;
     gap: 20px;
-    align-items: start;
+    align-items: center;
 }
 .content-container .profile {
     width: 100%;
-    max-width: 300px;
-    margin-left: 100px; 
+    max-width: 90%;
+    justify-self: center; 
     border-radius: 200%;
-    align-items: center;
+    align-items: cetner;
     }
+
 
 .content-container .intro {
     padding: 10px;
@@ -372,7 +371,6 @@ span[itemprop="name"]{
 
 
 .grid-item {
-
     padding: 20px; /* Padding inside each item */
     text-align: center; /* Center-align text */
   }
@@ -542,7 +540,7 @@ footer {
 /* ----------------------------------------------- */
 @media only screen and (max-width: 768px) {
     h1, h2, h3, h4, h5, h6 {
-        font-size: small; /* Adjust font size */
+        font-size: medium; /* Adjust font size */
     }
 
     .navbar li {
@@ -560,9 +558,14 @@ footer {
     .content-container{
         grid-template-columns: 1fr;
     }
-    .center-container{
+    .gallery-images
+    {
         grid-template-columns: 1fr;
     }
+
+    /* .center-container{
+        grid-template-columns: 1fr;
+    } */
 }
 
 @media screen and (max-width: 600px) {

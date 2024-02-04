@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
-
+//-------hcatpcha-------//
 const form = document.getElementById('form');
 
 form.addEventListener('submit', function(e) {
@@ -56,3 +56,5 @@ form.addEventListener('submit', function(e) {
         return
     }
 });
+
+
