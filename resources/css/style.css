@@ -229,6 +229,7 @@ h1 {
     word-spacing: 4px;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 h2 {
@@ -540,7 +541,7 @@ footer {
 /* ----------------------------------------------- */
 @media only screen and (max-width: 768px) {
     h1, h2, h3, h4, h5, h6 {
-        font-size: medium; /* Adjust font size */
+        font-size: x-large; /* Adjust font size */
     }
 
     .navbar li {
