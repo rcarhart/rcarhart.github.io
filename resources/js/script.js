@@ -1,4 +1,6 @@
+//variables
 
+const form = document.getElementById('form');
 const result = document.getElementById('result');
 document.addEventListener('DOMContentLoaded', function() {
   // ... h3 animation code ...
@@ -48,19 +50,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //-------hcatpcha-------//
 
 
-// form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function(e) {
 
-//     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
-//     if (!hCaptcha) {
-//         e.preventDefault();
-//         alert("Please fill out captcha field")
-//         return
-//     }
-// });
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    }
+});
 //------Form Submission------//
 
-const form = document.getElementById('form');
+
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   const formData = new FormData(form);
