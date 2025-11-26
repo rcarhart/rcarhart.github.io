@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 
 <html lang="en">
 
@@ -45,19 +45,14 @@
         <div class="content-container">
           <img src="resources/css/images/Business_Picture.jpg" alt="profile pic Ross Carhart" class='profile'>
             <p class="intro">
-                Hi, I’m Ross Carhart — a data strategist and analytics engineer with a passion for turning messy, complex data into powerful business insights.
-
-                I’ve helped brands like Abercrombie & Fitch, GNC, Doner Media, and TruFood Mfg build scalable data pipelines, uncover actionable marketing insights, and save millions through better reporting and automation.
-
-                At Abercrombie & Fitch, I currently lead the development of customer data models that support marketing, decision science, and product teams.
-
-                Before that, I consulted with national brands like McDonalds, Owen's Corning, CableOne, and others at Doner Media, grew GNC’s subscription business by 200%, and helped factories run more efficiently.
-
-                I’m fluent in SQL, Python, and Git, and I work with tools like Power BI, Tableau, Snowflake, dbt, Databricks, and Azure. Beyond the technical work, I enjoy mentoring analysts and building systems that make data easier (and faster) to use.
+                Hi, I am Ross Carhart. I am a dedicated data professional and consultant with a passion for leveraging data to solve complex business problems and drive measurable growth. Over my career, I've specialized in transforming messy, complex data into clear, powerful business insights that directly impact the bottom line.
+                I thrive on collaborating with cross-functional teams to build robust, scalable data solutions. My work has involved partnering with major brands to uncover actionable marketing insights and automate reporting processes, resulting in millions of dollars in savings and increased efficiency.
+                My expertise lies in modern data warehousing technologies, including Snowflake and Databricks. I focus on creating efficient data models and automating workflows, ensuring businesses have reliable, high-quality data when they need it. I believe data should be an accelerator for business growth, not a bottleneck.
+                Explore my projects below to see my methodologies in action, or feel free to connect with me to discuss how we can unlock your data's full potential.
             </p>
           </div>
             <div>
-              <h4>Data-Driven Solutions for Complex Challenges</h5>
+              <h4>Data-Driven Solutions for Complex Challenges</h4>
           </div>
     <div class="grid-container">
         <div>
@@ -167,29 +162,64 @@
     </section>
     <section class ="references" id="references">
         <h4>References</h4>
-        <div class="grid-container">
-            <div class="center-container">
-                <span itemprop="name">Pete Lawson</span>
-                <span itemprop="jobTitle">VP of Supply Chain</span>
-                <span itemprop="worksFor">SDC Nutrition</span>
-                <p>
-                    Ross stands out as one of the most industrious individuals I have encountered in my professional experience.
-                    His exceptional work ethic and dedication make him an invaluable asset to any team. Furthermore, his remarkable capacity for learning and adapting is unparalleled, setting him apart in dynamic work environments.
-                </p>
+        <div class="carousel-container">
+            <button class="carousel-button prev" aria-label="Previous reference">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <!-- Reference 1: Pete Lawson -->
+                    <div class="carousel-slide active">
+                        <div class="reference-card">
+                            <a href="https://www.linkedin.com/in/pete-lawson-b39142a3" target="_blank" class="reference-photo-link">
+                                <img src="resources/css/images/pete_lawson.jpeg" alt="Pete Lawson" class="reference-photo">
+                            </a>
+                            <div class="reference-info">
+                                <span itemprop="name">Pete Lawson</span>
+                                <span itemprop="jobTitle">VP of Supply Chain</span>
+                                <span itemprop="worksFor">SDC Nutrition</span>
+                                <p>
+                                    Ross stands out as one of the most industrious individuals I have encountered in my professional experience.
+                                    His exceptional work ethic and dedication make him an invaluable asset to any team. Furthermore, his remarkable capacity for learning and adapting is unparalleled, setting him apart in dynamic work environments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reference 2: Nicole Peduto -->
+                    <div class="carousel-slide">
+                        <div class="reference-card">
+                            <a href="https://www.linkedin.com/in/nicole-trifilio-peduto-22121219" target="_blank" class="reference-photo-link">
+                                <img src="resources/css/images/nicole_peduto.jpeg" alt="Nicole Peduto" class="reference-photo">
+                            </a>
+                            <div class="reference-info">
+                                <span itemprop="name">Nicole Peduto</span>
+                                <span itemprop="jobTitle">Director of Strategic Programs</span>
+                                <span itemprop="worksFor">GNC</span>
+                                <p>
+                                    Ross has proven himself to be someone who is always thinking with a consumer first mindset.
+                                    He is curious with a remarkable ability to comprehend complex business challenges and devise effective solutions.
+                                    Ross has been instrumental in providing clear analytics to C-suite executives and has the ability to not only share the data, but to tell the story of the data to help inform business decisions.
+                                    Ross was an instrumental member of our team, always willing to jump in and help with ad-hoc requests while maintaining his day to day.  He played a significant role in the overall growth of GNC subscription business and was invaluable to our team.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="center-container">
-                <span itemprop="name">Nicole Peduto</span>
-                <span itemprop="jobTitle">Director of Strategic Programs</span>
-                <span itemprop="worksFor">GNC</span>
-                <p>
-                    Ross has proven himself to be someone who is always thinking with a consumer first mindset.
-                    He is curious with a remarkable ability to comprehend complex business challenges and devise effective solutions.
-                    Ross has been instrumental in providing clear analytics to C-suite executives and has the ability to not only share the data, but to tell the story of the data to help inform business decisions. 
-                    Ross was an instrumental member of our team, always willing to jump in and help with ad-hoc requests while maintaining his day to day.  He played a significant role in the overall growth of GNC's subscription business and was invaluable to our team.
-                </p>
+
+            <button class="carousel-button next" aria-label="Next reference">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-indicators">
+                <button class="indicator active" aria-label="Go to reference 1"></button>
+                <button class="indicator" aria-label="Go to reference 2"></button>
             </div>
         </div>
-    </section>
+
+</section>
 
     <section class="contact-us" id="contact">
         <form action="https://api.web3forms.com/submit" method="post" class="contact-form" id='form'>
@@ -245,7 +275,7 @@
     <script src="resources/js/script.js"></script>
     <script src="resources/js/app.js"></script>
     <script src="resources/js/lib/stats.js"></script>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="resources/js/carousel.js"></script>
 </body>
 
 </html>
