@@ -5,7 +5,9 @@
 <head>
     <title>Ross Carhart Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ross Carhart — Senior Data Strategist &amp; Analytics Engineer. 8+ years delivering multi-million dollar data solutions using Snowflake, dbt, Power BI, and Python.">
+    <meta name="author" content="Ross Carhart">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="resources/css/grid.css" rel='stylesheet' type="text/css">
@@ -24,7 +26,8 @@
 <body>
 
     <header>
-        <ul class='navbar'>
+        <button class="hamburger" id="hamburger" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+        <ul class='navbar' id="navbar">
             <li><a href="#home">About Ross</a></li>
             <li><a href="#career">Career</a></li>
             <li><a href="#contact">Contact Me</a></li>
@@ -155,6 +158,28 @@
             </p>
         </div>
     </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">$5M+</span>
+                <span class="stat-label">Cost Savings Delivered</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">200%</span>
+                <span class="stat-label">Subscription Growth</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">30%</span>
+                <span class="stat-label">Pipeline Runtime Reduction</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">8+</span>
+                <span class="stat-label">Years of Experience</span>
+            </div>
+        </div>
     </section>
 
     <section class='visualizations' id="visuals">
@@ -329,10 +354,17 @@
         </form>
     </section>
 
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
     <footer>
-            <p class='copyright'>
-                Copyright &copy; 2024 by Ross Carhart. All rights reserved.
-            </p>
+        <div class="footer-social">
+            <a href="https://github.com/rcarhart" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ross-carhart-%F0%9F%98%81-504b8761" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://public.tableau.com/profile/ross.carhart#!/" target="_blank" aria-label="Tableau"><i class="fa-solid fa-chart-bar"></i></a>
+            <a href="mailto:rcarhart2@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class='copyright'>
+            Copyright &copy; 2026 by Ross Carhart. All rights reserved.
+        </p>
     </footer>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="resources/js/particles.js"></script>

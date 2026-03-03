@@ -57,4 +57,52 @@ form.addEventListener('submit', function(e) {
     }
 });
 
+// ------- Active navbar on scroll ------- //
+(function () {
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const active = document.querySelector(`.navbar a[href="#${entry.target.id}"]`);
+                if (active) active.classList.add('active');
+            }
+        });
+    }, { threshold: 0.4, rootMargin: '-10% 0px -50% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+})();
+
+// ------- Hamburger menu ------- //
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+    if (hamburger && navbar) {
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('open');
+        });
+        navbar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navbar.classList.remove('open'));
+        });
+    }
+});
+
+// ------- Scroll to top ------- //
+(function () {
+    const btn = document.getElementById('scrollToTop');
+    if (!btn) return;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    });
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+
 
