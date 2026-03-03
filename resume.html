@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Ross Carhart — Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MC536JMFYS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MC536JMFYS');
+    </script>
+
+    <style>
+        /* ---- Base ---- */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: #282525;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: #e8e8e8;
+            line-height: 1.6;
+        }
+
+        a { color: #eb0909; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ---- Top nav ---- */
+        .top-nav {
+            background-color: #1e1b1b;
+            padding: 0 2%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .top-nav li a {
+            display: inline-block;
+            color: #eb0909;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .top-nav li a:hover { background-color: #ffffff; color: #282525; }
+
+        .top-nav .back-link { color: #ffffff; }
+
+        /* ---- Resume wrapper ---- */
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ---- Print button ---- */
+        .print-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 24px;
+        }
+
+        .print-btn {
+            background: #eb0909;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        .print-btn:hover { background: #c40000; }
+
+        /* ---- Resume header ---- */
+        .resume-header {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #eb0909;
+            margin-bottom: 32px;
+        }
+
+        .resume-header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .resume-header .title {
+            font-size: 1.05rem;
+            color: #eb0909;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .resume-header .contact-line {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: #b0b0b0;
+        }
+
+        .resume-header .contact-line a { color: #b0b0b0; }
+        .resume-header .contact-line a:hover { color: #eb0909; }
+
+        .resume-header .contact-line i { margin-right: 5px; color: #eb0909; }
+
+        /* ---- Sections ---- */
+        .resume-section {
+            margin-bottom: 36px;
+        }
+
+        .resume-section h2 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #eb0909;
+            border-bottom: 1px solid #444;
+            padding-bottom: 6px;
+            margin-bottom: 18px;
+        }
+
+        /* ---- Summary ---- */
+        .summary p {
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        /* ---- Experience / Education entries ---- */
+        .entry {
+            margin-bottom: 24px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 2px;
+        }
+
+        .entry-header .role {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .entry-header .dates {
+            font-size: 0.82rem;
+            color: #888;
+            white-space: nowrap;
+        }
+
+        .entry .company {
+            font-size: 0.88rem;
+            color: #eb0909;
+            margin-bottom: 8px;
+        }
+
+        .entry ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .entry ul li {
+            position: relative;
+            padding-left: 18px;
+            color: #cccccc;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .entry ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #eb0909;
+        }
+
+        /* ---- Skills ---- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .skills-category h3 {
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: #3a3535;
+            color: #cccccc;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            border: 1px solid #555;
+        }
+
+        /* ---- Footer ---- */
+        .resume-footer {
+            text-align: center;
+            color: #555;
+            font-size: 0.75rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3a3535;
+        }
+
+        /* ---- Print styles ---- */
+        @media print {
+            body { background: #fff; color: #000; font-size: 11pt; }
+            .top-nav, .print-bar { display: none; }
+            .resume-wrapper { max-width: 100%; margin: 0; padding: 0; }
+            .resume-header h1 { color: #000; }
+            .resume-header .title { color: #c00000; }
+            .resume-header .contact-line { color: #333; }
+            .resume-header .contact-line a { color: #333; }
+            .resume-section h2 { color: #c00000; border-color: #ccc; }
+            .entry-header .role { color: #000; }
+            .entry .company { color: #c00000; }
+            .entry ul li { color: #333; }
+            .skill-tag { background: #f0f0f0; color: #333; border-color: #ccc; }
+            .resume-header { border-color: #c00000; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html" class="back-link"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back to Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="resume-wrapper">
+
+        <div class="print-bar">
+            <button class="print-btn" onclick="window.print()">
+                <i class="fas fa-print" style="margin-right:6px;"></i>Print / Save as PDF
+            </button>
+        </div>
+
+        <!-- ==================== HEADER — EDIT YOUR INFO HERE ==================== -->
+        <header class="resume-header">
+            <h1>Ross Carhart</h1>
+            <p class="title">Senior Data Strategist &amp; Analytics Engineer</p>
+            <div class="contact-line">
+                <span><i class="fas fa-envelope"></i><a href="mailto:rcarhart2@gmail.com">rcarhart2@gmail.com</a></span>
+                <span><i class="fas fa-map-marker-alt"></i>Pittsburgh, PA</span>
+                <span><i class="fas fa-globe"></i><a href="https://rosscarhart.com" target="_blank">rosscarhart.com</a></span>
+                <span><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/ross-carhart-%F0%9F%98%81-504b8761" target="_blank">LinkedIn</a></span>
+                <span><i class="fab fa-github"></i><a href="https://github.com/rcarhart" target="_blank">GitHub</a></span>
+            </div>
+        </header>
+
+        <!-- ==================== SUMMARY ==================== -->
+        <section class="resume-section summary">
+            <h2>Summary</h2>
+            <p>
+                Senior Data Strategist and Analytics Engineer with expertise in data modeling, BI development, and ETL automation.
+                Proven record of delivering multi-million dollar cost savings, optimizing data pipelines, and leading analytics teams
+                to drive measurable business impact. Skilled at translating complex data into actionable insights across retail,
+                media, and consumer industries.
+            </p>
+        </section>
+
+        <!-- ==================== EXPERIENCE — ADD / EDIT JOBS HERE ==================== -->
+        <section class="resume-section">
+            <h2>Experience</h2>
+
+            <!-- Job 1 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="role">Senior Data Strategist</span>
+                    <span class="dates">Oct 2024 – Present</span>
+                </div>
+                <div class="company">Abercrombie &amp; Fitch &bull; Remote</div>
+                <ul>
+                    <li>Architected a comprehensive customer data model enabling marketing, decision sciences, and product teams to build KPIs, analyze campaigns, and optimize audience targeting.</li>
+                    <li>Trained and mentored analysts in SQL, BI tools, and data modeling, elevating team efficiency and data literacy.</li>
+                    <li>Developed Power BI reports for Returns, Fraud, and Abuse, leading to a $2M reduction in costs.</li>
+                    <li>Built affiliate analytics reporting in Power BI that reduced reconciliation inefficiencies, saving $3M annually.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="role">Senior Analytics Engineer</span>
+                    <span class="dates">Apr 2023 – Oct 2024</span>
+                </div>
+                <div class="company">Doner Media &bull; Remote</div>
+                <ul>
+                    <li>Implemented a dbt project to streamline data transformation processes, increasing scalability and governance.</li>
+                    <li>Automated marketing campaign data extraction using open-source platforms, reducing data acquisition costs.</li>
+                    <li>Delivered client-facing Tableau and Power BI dashboards for UPS, McDonald's, CableOne, and Owens Corning, improving business insights and client satisfaction.</li>
+                    <li>Optimized pipelines through code refactoring, reducing runtimes by 30%.</li>
+                </ul>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="role">Senior Data Analyst</span>
+                    <span class="dates">Sept 2021 – Apr 2023</span>
+                </div>
+                <div class="company">GNC &bull; Pittsburgh, PA</div>
+                <ul>
+                    <li>Grew subscription business 200% by designing new KPIs to better market and measure subscription customers.</li>
+                    <li>Automated reporting in Tableau and Power BI, eliminating repetitive ad-hoc requests and saving analyst time.</li>
+                    <li>Built automated discontinued-product tracking to deplete inventory and reduce out-of-stock notices.</li>
+                    <li>Detected and fixed bugs in inventory algorithms and marketing campaigns, improving fulfillment by 10% and reducing customer spam.</li>
+                    <li>Designed A/B tests to measure marketing effectiveness and developed pipelines to monitor competitors' social, SEO, and retail data.</li>
+                    <li>Managed and mentored analysts and interns.</li>
+                </ul>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="role">Data Analyst</span>
+                    <span class="dates">Nov 2017 – Sept 2021</span>
+                </div>
+                <div class="company">TruFoodMfg &bull; Pittsburgh, PA</div>
+                <ul>
+                    <li>Created BI dashboards for executives and plant managers, enabling data-driven decision-making in factory operations.</li>
+                    <li>Developed and tracked KPIs that reduced downtime by 25% and lowered operating costs by 10%.</li>
+                    <li>Managed Tableau Server and ensured robust reporting through rigorous data quality processes.</li>
+                    <li>Established a Quality Metric for a corporate bonus program, incentivizing employees to prioritize quality.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- ==================== SKILLS ==================== -->
+        <section class="resume-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+
+                <div class="skills-category">
+                    <h3>Data &amp; Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Postgres</span>
+                        <span class="skill-tag">Microsoft SQL Server</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">dbt</span>
+                        <span class="skill-tag">Spark</span>
+                        <span class="skill-tag">Kafka</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>BI &amp; Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Alteryx</span>
+                        <span class="skill-tag">Excel</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Tools &amp; DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">PowerShell</span>
+                        <span class="skill-tag">JIRA</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Expertise</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                        <span class="skill-tag">ETL Pipelines</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Analytics</span>
+                        <span class="skill-tag">Data Strategy</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== EDUCATION ==================== -->
+        <section class="resume-section">
+            <h2>Education</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="role">Certificate in Computer Software Engineering</span>
+                    <span class="dates">2020 – 2022</span>
+                </div>
+                <div class="company">Community College of Allegheny County</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="role">Bachelor of Science (B.S.)</span>
+                    <span class="dates">2008 – 2012</span>
+                </div>
+                <div class="company">University of Pittsburgh &bull; Pittsburgh, PA</div>
+            </div>
+
+        </section>
+
+        <div class="resume-footer">
+            <p>Ross Carhart &mdash; <a href="https://rcarhart.github.io">rcarhart.github.io</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
