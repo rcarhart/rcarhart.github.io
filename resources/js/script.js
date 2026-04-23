@@ -50,9 +50,9 @@ form.addEventListener('submit', function(e) {
 
     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
-    if (!hCaptcha) {
+    if (!turnstileResponse) {
         e.preventDefault();
-        alert("Please fill out captcha field")
+        alert("Please complete the security check")
         return
     }
 });
